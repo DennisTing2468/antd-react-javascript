@@ -1,8 +1,8 @@
-import {masterSetupAxios} from "../axiosBase";
+import {hsAxios} from "../axiosBase";
 
 const login = async (requestData) => {
 	const { username, password } = requestData;
-	const res = await masterSetupAxios.post("/login", {
+	const res = await hsAxios.post("/users", {
 		username,
 		password
 	})

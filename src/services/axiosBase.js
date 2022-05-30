@@ -20,3 +20,7 @@ export const dealerAxios = axios.create({
 		Authorization: `Bearer ${localStorage.getItem('token')}`,
 	}
 })
+
+export const hsAxios = axios.create({
+	baseURL: 'http://localhost:8089/api/v1',
+})

@@ -3,6 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {DashboardView} from "./pages/Dashboard";
 import {MainLayout} from "./layout";
 import {LoginView} from "./pages/Login";
+import ListingUsers from "./pages/ListingUser";
+import CreateUser from "./pages/ListingUser/createUser";
+import UserListing from "./pages/ListingUser";
+import UserCreate from "./pages/ListingUser/createUser";
 
 function App() {
 
@@ -21,10 +25,13 @@ function App() {
             <BrowserRouter>
                 {
                     <Routes>
-                        <Route path="/" element={<LoginView/>}/>
-                        <Route path="/login" element={<LoginView/>}/>
+                        {/* <Route path="/" element={<LoginView/>}/>
+                        <Route path="/login" element={<LoginView/>}/> */}
                         <Route path="/" element={<MainLayout/>}>
                             <Route path="/dashboard" element={<DashboardView/>}/>
+                            <Route path="/userListing" element={<UserListing />} />
+                            <Route path="/userCreate" element={<UserCreate/>}/>
+
                         </Route>
                         <Route
                             path="*"
